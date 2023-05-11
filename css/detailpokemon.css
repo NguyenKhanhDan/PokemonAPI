@@ -1,0 +1,148 @@
+:root {
+    --color-fire: #FF9C54;
+    --color-grass: #61BC57;
+    --color-steel: #9eb7b8;
+    --color-water: #4D90D5;
+    --color-psychic: #f366b9;
+    --color-ground: #ab9842;
+    --color-ice: #51c4e7;
+    --color-flying: #94AADD;
+    --color-ghost: #4d5b64;
+    --color-normal: #9099A1;
+    --color-poison: #AE68C9;
+    --color-rock: #a38c21;
+    --color-fighting: #d56723;
+    --color-dark: #707070;
+    --color-bug: #729f3f;
+    --color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+    --color-electric: #bba909;
+    --color-fairy: #fdb9e9;
+    --color-shadow: #7b62a3;
+    --color-unknow: #757575;
+    --color-primary: #006d77;
+    --color-primary-hover: #83c5be;
+}
+.detail-card {
+    display: flex;
+    justify-content: center;
+}
+.detail-container {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 47%;
+}
+.poke-card {
+    height: 90%;
+    border-radius: 18px 18px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.card-top {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 20px;
+    display: flex;
+    height: 55%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #98e56c;
+    background-image: url("../images/pokeballgrayscale.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    border-radius: 18px 18px 0 0;
+}
+.poke-card-name-id {
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.poke-card-name-id .poke-card-name {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 1px 1px rgba(51, 51, 51, 0.525);
+}
+.poke-card-name-id .poke-card-id {
+    padding-right: 10%;
+    font-size: 32px;
+    font-weight: 600;
+    color: #f9e2e2;
+    text-shadow: 1px 1px rgba(51, 51, 51, 0.565);
+}
+.card-top .poke-card-type {
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.63);
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 0 3px;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.598);
+}
+.card-top .poke-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-top .poke-img img {
+    height: 100%;
+}
+.card-bottom {
+    height: 45%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.card-bottom .card-status {
+    width: 100%;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    justify-self: center;
+}
+.card-bottom .card-status ul {
+    display: flex;
+    flex-direction: column;
+}
+.card-bottom .card-status ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: 10px;
+    padding: 5px 0;
+    text-align: center;
+}
+.card-bottom .card-status ul h4 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.309);
+    text-align: center;
+    font-weight: 600;
+}
+.preCard {
+    padding-top: 20px;
+}
+.preCard a {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.preCard a i {
+    font-size: 50px;
+}

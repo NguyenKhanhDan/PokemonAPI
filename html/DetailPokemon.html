@@ -1,0 +1,50 @@
+<div>
+    <div class="preCard">
+        <a class="btn-preCard" href="#CardPokemon">
+            <i class='bx bx-chevron-left'></i>
+        </a>
+    </div>
+    <div class="detail-card" ng-controller="detailPokemonCtrl">
+        <div class="detail-container content-container">
+            <div class="poke-card">
+                <div class="card-top">
+                    <div class="poke-card-name-id">
+                        <span class="poke-card-name">
+                            {{pokemon_name}}
+                        </span>
+                        <span class="poke-card-id">
+                            {{id}}
+                        </span>
+                    </div>
+                    <span class="poke-card-type">
+                        {{cardType}}
+                    </span>
+                    <div class="poke-img">
+                        <img src="{{pokemon_image}}" class="poke-card-img">
+                    </div>
+    
+                </div>
+                <div class="card-bottom">
+                    <span class="card-status">
+    
+                        <ul>
+                            <h4>Status</h4>
+                            <li class="poke-stat-hp">HP: {{hp}}</li>
+                            <li class="poke-stat-ataque">Attack: {{attack}}</li>
+                            <li class="poke-stat-defesa">Defense: {{defense}}</li>
+                            <li class="poke-stat-ataque-sp">Atq .Sp: {{atq}}</li>
+                            <li class="poke-stat-defesa-sp">Def .Sp: {{def}}</li>
+                            <li class="poke-stat-velocidade">Speed: {{speed}}</li>
+                        </ul>
+    
+                        <ul>
+                            <h4>BMI</h4>
+                            <li class="poke-stat-skill1">Height: {{height}}</li>
+                            <li class="poke-stat-skill2">Weightl: {{weight}}</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

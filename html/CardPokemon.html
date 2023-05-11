@@ -1,0 +1,141 @@
+<div ng-controller="CardPokemonCtrl">
+    <header>
+        <a href="" class="logo">
+            <img src="images/logo.png" alt="Logo" />
+        </a>
+        <form>
+            <div class="form-group">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-search"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    />
+                </svg>
+                <input
+                    type="search" ng-model="search" ng-change="Search()" placeholder="Search by name pokemon"
+                />
+            </div>
+        
+            <!-- <button class="btn-search">Seach</button> -->
+        </form>
+    </header>
+    
+        <hr>
+        <div class="container-filter">
+            <div class="icon-filter">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+                    />
+                </svg>
+                <span>Filtrar</span>
+            </div>
+            
+            <div class="first-container content-container">
+            <!-- <ul class="types" ng-controller="CardPokemonCtrl">
+                <li onclick="FilterByType('water')" class="water">Agua <img
+                        src="images/icons/Pokemon_Type_Icon_Water.svg" alt=""></li>
+                <li onclick="FilterByType('fire')" class="fire">Fuego <img
+                        src="images/icons/Pokemon_Type_Icon_Fire.svg" alt=""></li>
+                <li onclick="FilterByType('grass')" class="grass">Grass <img
+                        src="images/icons/Pokemon_Type_Icon_Grass.svg" alt=""></li>
+                <li onclick="FilterByType('flying')" class="flying">Voador <img
+                        src="images/icons/Pokemon_Type_Icon_Flying.svg" alt=""></li>
+                <li onclick="FilterByType('poison')" class="poison">Poison <img
+                        src="images/icons/Pokemon_Type_Icon_Poison.svg" alt=""></li>
+                <li onclick="FilterByType('normal')" class="normal">Normal <img
+                        src="images/icons/Pokemon_Type_Icon_Normal.svg" alt=""></li>
+            </ul> -->
+            <ul class="types">
+                <li class="water">Agua <img
+                        src="images/icons/Pokemon_Type_Icon_Water.svg" alt=""></li>
+                <li class="fire">Fuego <img
+                        src="images/icons/Pokemon_Type_Icon_Fire.svg" alt=""></li>
+                <li class="grass">Grass <img
+                        src="images/icons/Pokemon_Type_Icon_Grass.svg" alt=""></li>
+                <li class="flying">Voador <img
+                        src="images/icons/Pokemon_Type_Icon_Flying.svg" alt=""></li>
+                <li class="poison">Poison <img
+                        src="images/icons/Pokemon_Type_Icon_Poison.svg" alt=""></li>
+                <li class="normal">Normal <img
+                        src="images/icons/Pokemon_Type_Icon_Normal.svg" alt=""></li>
+            </ul>
+            </div>
+        </div>
+        <hr>
+        <main class="card-list-pokemon" ng-controller="detailPokemonCtrl"  >
+            <div ng-show="list.length==0">
+                <h3 style="margin: 30px;">Pokemon not exist!</h3>
+            </div>
+            <div ng-repeat="pok in list"  >
+                <a  href="" ng-click="detailCard(pok.name)" class="card-pokemon" >
+                   
+                    <div class="card-img"  >
+                        <img class="poke-img-card"
+                        src="{{elem[$index]}}"
+                        alt="No image"
+                        />
+                    </div>
+                    <div class="card-info">
+                        <span class="pokemon-id">#{{$index+1}}</span>
+                        <h3>{{pok.name}}</h3>
+                        <div class="card-types">
+                            <span class="grass">{{type[$index]}}</span>
+                            <!-- <span class="poison">Poison</span> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- <a href="#detailPokemon" class="card-pokemon">
+                <div class="card-img">
+                    <img
+                        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png"
+                        alt="pokemon bulbasaur"
+                    />
+                </div>
+                <div class="card-info">
+                    <span class="pokemon-id">#1</span>
+                    <h3>Bulbasaur</h3>
+                    <div class="card-types">
+                        <span class="grass">Planta</span>
+                        <span class="poison">Veneno</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#detailPokemon" class="card-pokemon">
+                <div class="card-img">
+                    <img
+                        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png"
+                        alt="pokemon ivysaur"
+                    />
+                </div>
+                <div class="card-info">
+                    <span class="pokemon-id">#2</span>
+                    <h3>Ivysaur</h3>
+                    <div class="card-types">
+                        <span class="grass">Planta</span>
+                        <span class="poison">Veneno</span>
+                    </div>
+                </div>
+            </a>
+            
+            -->
+        </main>
+</div>
